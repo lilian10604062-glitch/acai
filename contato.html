@@ -1,0 +1,55 @@
+<!DOCTYPE html><html lang="pt-BR"><head><title>Contato | Açayteria Da Lily</title><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Açayteria Da Lily — açaí, sorvetes e vitaminas.">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="img/logo-acayteria.png">
+</head><body>
+<header>
+  <div class="navbar">
+    <a href="index.html"><img class="logo-mini" src="img/logo-acayteria.png" alt="Logo Açayteria Da Lily"></a>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="acai.html">Açaí</a>
+      <a href="sorvetes.html">Sorvetes</a>
+      <a href="vitaminas.html">Vitaminas</a>
+      <a href="contato.html" class="ativo">Contato</a>
+    </nav>
+  </div>
+</header>
+<main class="secao">
+  <div class="titulo"><h2>Fale com a Açayteria Da Lily</h2><p>Entre em contato, veja a localização ou mande seu pedido.</p></div>
+  <div class="info-grid">
+    <div class="info"><h3>📱 WhatsApp</h3><p>(00) 00000-0000</p><br><a class="btn btn-roxo" href="https://wa.me/5500000000000?text=Olá%20Açayteria%20Da%20Lily!" target="_blank">Abrir WhatsApp</a></div>
+    <div class="info"><h3>📸 Instagram</h3><p>@seuinstagram</p><br><a class="btn btn-outline" href="https://www.instagram.com/" target="_blank">Abrir Instagram</a></div>
+    <div class="info"><h3>📍 Localização</h3><p>Coloque aqui o endereço da loja.</p><br><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Açayteria%20Da%20Lily" target="_blank">Abrir Maps</a></div>
+  </div>
+  <section style="margin-top:55px">
+    <div class="titulo"><h2>Envie uma mensagem</h2><p>O botão abaixo abre o WhatsApp com sua mensagem.</p></div>
+    <form class="formulario" onsubmit="enviarWhatsApp(event)">
+      <label for="nome">Seu nome</label><input id="nome" required placeholder="Digite seu nome">
+      <label for="mensagem">Mensagem</label><textarea id="mensagem" required placeholder="Ex.: Quero fazer um pedido..."></textarea>
+      <button class="btn btn-roxo" type="submit">Enviar pelo WhatsApp</button>
+    </form>
+  </section>
+  <div class="mapa">
+    <iframe src="https://www.google.com/maps?q=Açayteria%20Da%20Lily&output=embed" loading="lazy"></iframe>
+  </div>
+</main>
+<script>
+function enviarWhatsApp(e){
+  e.preventDefault();
+  const nome=document.getElementById('nome').value;
+  const msg=document.getElementById('mensagem').value;
+  const texto=encodeURIComponent(`Olá! Meu nome é ${nome}. ${msg}`);
+  window.open('https://wa.me/5500000000000?text='+texto,'_blank');
+}
+</script>
+<footer>
+  <p><strong>Açayteria Da Lily</strong> — Açaí • Sorvetes • Vitaminas</p>
+  <div class="social">
+    <a class="btn btn-roxo" href="https://wa.me/5500000000000?text=Olá%20Açayteria%20Da%20Lily!" target="_blank">WhatsApp</a>
+    <a class="btn btn-outline" href="https://www.instagram.com/" target="_blank">Instagram</a>
+    <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Açayteria%20Da%20Lily" target="_blank">Localização</a>
+  </div>
+  <small>Edite os contatos reais no arquivo contato.html e no rodapé das páginas.</small>
+</footer></body></html>
